@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lumi Campus Connect</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Include Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div id="app" class="app-container">
+    <!-- Loading screen, shown by default -->
+    <div id="loading-screen" class="loading-screen">
+      <div class="loading-container">
+        <div class="spinner"></div>
+        <h2 class="app-title">Lumi Campus Connect</h2>
+        <p class="loading-text">Loading your preferences...</p>
+      </div>
+    </div>
+
+    <!-- Main app, hidden by default -->
+    <div id="main-app" class="main-app hidden">
+      <!-- Header -->
+      <header class="app-header">
+        <h1 class="header-title">Lumi Campus Connect</h1>
+        <div class="header-actions">
+          <button id="notification-toggle" class="icon-button">
+            <i class="fas fa-bell"></i>
+          </button>
+          <button id="theme-toggle" class="icon-button">
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </header>
+
+      <!-- Main Content -->
+      <main class="app-content">
+        <!-- Home Tab Content -->
+        <div id="home-content" class="tab-content">
+          <h2 class="content-title">Welcome to Lumi Campus Connect</h2>
+          <div class="info-card">
+            <p class="card-heading">Your next class: Web Development 101</p>
+            <p>Location: Tech Building, Room 305</p>
+            <p>Time: 2:30 PM - 4:00 PM</p>
+          </div>
+        </div>
+
+        <!-- Courses Tab Content -->
+        <div id="courses-content" class="tab-content hidden">
+          <h2 class="content-title">My Courses</h2>
+          <ul class="course-list">
+            <li class="course-item green">Web Development 101</li>
+            <li class="course-item purple">Introduction to AI</li>
+            <li class="course-item yellow">Data Structures</li>
+          </ul>
+        </div>
+
+        <!-- Calendar Tab Content -->
+        <div id="calendar-content" class="tab-content hidden">
+          <h2 class="content-title">Calendar</h2>
+          <div class="calendar-card">
+            <p class="card-heading">Today</p>
+            <p>Web Development - 2:30 PM</p>
+            <p>Study Group - 5:00 PM</p>
+          </div>
+          <div class="calendar-card">
+            <p class="card-heading">Tomorrow</p>
+            <p>Data Structures - 10:00 AM</p>
+            <p>AI Lab - 1:15 PM</p>
+          </div>
+        </div>
+
+        <!-- Settings Tab Content -->
+        <div id="settings-content" class="tab-content hidden">
+          <h2 class="content-title">Settings</h2>
+          <div class="settings-list">
+            <div class="settings-item">
+              <span>Dark Mode</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="dark-mode-checkbox">
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="settings-item">
+              <span>Notifications</span>
+              <label class="toggle-switch">
+                <input type="checkbox" id="notifications-checkbox" checked>
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+            <div class="settings-action">
+              <button id="reset-button" class="reset-button">Reset Preferences</button>
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <!-- Navigation Bar -->
+      <nav class="app-nav">
+        <button class="nav-item active" data-tab="home">
+          <i class="fas fa-home"></i>
+          <span>Home</span>
+        </button>
+        <button class="nav-item" data-tab="courses">
+          <i class="fas fa-book"></i>
+          <span>Courses</span>
+        </button>
+        <button class="nav-item" data-tab="calendar">
+          <i class="fas fa-calendar"></i>
+          <span>Calendar</span>
+        </button>
+        <button class="nav-item" data-tab="settings">
+          <i class="fas fa-cog"></i>
+          <span>Settings</span>
+        </button>
+      </nav>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
